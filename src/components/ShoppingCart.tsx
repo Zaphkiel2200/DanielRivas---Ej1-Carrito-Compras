@@ -14,6 +14,12 @@ const ShoppingCart = () => {
             <div className="cart-badge">
                 Cantidad de productos: {cart.length}
             </div>
+            <ul className="product-list">
+                {cart.map(p => (
+                    <li key={p.id}>{p.nombre} - ${p.precio}</li>
+                ))}
+            </ul>
+            <button className="add-product-btn">Agregar Producto</button>
         </div>
     );
 };
